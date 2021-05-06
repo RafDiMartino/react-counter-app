@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.App {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 5rem;
+}
+
+.countContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count{
+  font-size: 3rem;
+  margin: 0;
+  width: 200px;
+}
+
+.btnCount{
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.61);
+
+}
+
+.btnCount:active {
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.61);
+}
+
+.reset {
+  margin-top: 2rem;
+  font-size: 1rem;
+}

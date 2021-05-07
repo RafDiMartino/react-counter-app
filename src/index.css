@@ -1,5 +1,23 @@
+:root {
+  --boxShadow: 1px 1px 3px rgba(0, 0, 0, 0.61);
+  --boxShadowInset: inset 1px 1px 3px rgba(0, 0, 0, 0.61);
+  --rootColor: rgb(181, 181, 255);
+  --mainColor: rgb(194, 194, 255);
+  --btnsColor: rgb(198, 198, 255);
+}
+
+html {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  
+  background-color: var(--rootColor);
+}
+
 body {
-  margin: 0;
+  width: auto;
+  height: auto;
+  margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,46 +34,128 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  background-color: var(--rootColor);
 }
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--boxShadow);
+  padding: 2rem;
+  border-radius: 10px;
+  min-width: 250px;
+  background-color: var(--mainColor);
 }
 
 .title {
-  margin-bottom: 5rem;
+  margin: 0;
 }
 
-.countContainer{
+.setCount{
+  width: 100%;
+  margin-top: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  
 }
 
 .count{
   font-size: 3rem;
-  margin: 0;
-  width: 200px;
+  margin-top: 2rem;
 }
 
-.btnCount{
+.btnUpdate{
+  outline: none;
+  border: none;
+  background-color: var(--btnsColor);
+  box-shadow: var(--boxShadow);
+  padding: 0.5rem 0;
+  border-radius: 50px;
+}
+
+.btnUpdate:active {
+  background-color: var(--mainColor);
+  box-shadow: var(--boxShadowInset);
+}
+
+.manualCountContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.manualCount{
   outline: none;
   border: none;
   height: 50px;
   width: 50px;
   border-radius: 50px;
   font-size: 1.5rem;
-  background-color: white;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.61);
+  background-color: var(--btnsColor);
+  box-shadow: var(--boxShadow);
 
 }
 
-.btnCount:active {
-  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.61);
+.manualCount:active {
+  background-color: var(--mainColor);
+  box-shadow: var(--boxShadowInset);
 }
 
 .reset {
-  margin-top: 2rem;
   font-size: 1rem;
+  font-weight: 700;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  width: 100%;
+  border-radius: 50px;
+  outline: none;
+}
+
+input{
+  padding: 0.5rem 0;
+  text-align: center;
+  border: none;
+  background-color: var(--mainColor);
+  box-shadow: var(--boxShadowInset);
+}
+
+.autoCountContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+}
+
+.autoCount {
+  outline: none;
+  border: none;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: var(--btnsColor);
+  box-shadow: var(--boxShadow);
+}
+
+.autoCount:active {
+  background-color: var(--mainColor);
+  box-shadow: var(--boxShadowInset);
 }

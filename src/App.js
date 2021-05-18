@@ -53,11 +53,11 @@ function App() {
       <h1 className="title">Counter App</h1>
       <div className="setCount">
         <label>Start count from <br />
-          <input onChange={handleChange} value={inputVal} type="number" />
+          <input onChange={handleChange} value={inputVal} type="tel" />
         </label>
         <button className="btnUpdate" onClick={handleClickUpdate}>Update</button>
       </div>
-      <h2 className="count">{count}</h2>
+      <div className="count">{count}</div>
       <div className="manualCountContainer">
         <button className="manualCount" onClick={countChange(count - 1)}>-</button>
         <button className="manualCount reset" onClick={countClear}>C</button>

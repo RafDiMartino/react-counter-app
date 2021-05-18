@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
-  --boxShadow: 1px 1px 3px rgba(0, 0, 0, 0.61);
-  --boxShadowInset: inset 1px 1px 3px rgba(0, 0, 0, 0.61);
-  --rootColor: rgb(181, 181, 255);
-  --mainColor: rgb(194, 194, 255);
-  --btnsColor: rgb(198, 198, 255);
+  --AppBoxShadow: 1px 1px 5px rgba(0, 0, 0, 0.13), -1px -1px 5px rgba(0, 0, 0, 0.13);
+  --boxShadow: 1px 1px 3px rgba(0, 0, 0, 0.315);
+  --boxShadowInset: inset 1px 1px 3px rgba(0, 0, 0, 0.315);
+  --rootColor: #4A353B;
+  --mainColor: #A0A4B8;
+  --btnsColor: #D8DDEF;
+  --btnColorInset: #BCC1D4;
 }
 
 html {
@@ -15,19 +19,10 @@ html {
 }
 
 body {
-  width: auto;
-  height: auto;
   margin: auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 #root{
@@ -43,7 +38,7 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--boxShadow);
+  box-shadow: var(--AppBoxShadow);
   padding: 2rem;
   border-radius: 10px;
   min-width: 250px;
@@ -62,14 +57,21 @@ code {
 }
 
 label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   font-weight: 600;
   
 }
 
 .count{
   font-size: 3rem;
-  margin-top: 2rem;
+  margin: 2.5rem 0;
+  width: 250px;
+  padding: 1rem 1rem;
+  box-shadow: var(--boxShadowInset);
+  border-radius: 20px;
+  background-color: var(--btnColorInset);
+  font-weight: 500;
+  word-break: break-all;
 }
 
 .btnUpdate{
@@ -77,13 +79,16 @@ label {
   border: none;
   background-color: var(--btnsColor);
   box-shadow: var(--boxShadow);
+  height: 2rem;
   padding: 0.5rem 0;
   border-radius: 50px;
+  font-weight: 600;
 }
 
 .btnUpdate:active {
-  background-color: var(--mainColor);
+  background-color: var(--btnColorInset);
   box-shadow: var(--boxShadowInset);
+  font-size: 0.8rem;
 }
 
 .manualCountContainer{
@@ -107,8 +112,10 @@ label {
 }
 
 .manualCount:active {
-  background-color: var(--mainColor);
+  background-color: var(--btnColorInset);
   box-shadow: var(--boxShadowInset);
+  font-size: 1.43rem;
+
 }
 
 .reset {
@@ -116,25 +123,22 @@ label {
   font-weight: 700;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.reset:active{
+  font-size: 0.95rem;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+input[type=tel] {
   width: 100%;
   border-radius: 50px;
   outline: none;
+  margin-top: 0.5rem;
 }
 
 input{
   padding: 0.5rem 0;
   text-align: center;
   border: none;
-  background-color: var(--mainColor);
+  background-color: var(--btnColorInset);
   box-shadow: var(--boxShadowInset);
 }
 
@@ -148,14 +152,16 @@ input{
 .autoCount {
   outline: none;
   border: none;
-  width: 85px;
-  height: 85px;
+  width: 90px;
+  height: 90px;
+  font-weight: 600;
   border-radius: 50%;
   background-color: var(--btnsColor);
   box-shadow: var(--boxShadow);
 }
 
 .autoCount:active {
-  background-color: var(--mainColor);
+  background-color: var(--btnColorInset);
   box-shadow: var(--boxShadowInset);
+  font-size: 0.8rem;
 }
